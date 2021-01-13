@@ -16,6 +16,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 const HomeScreen = ({navigation}) => {
   const [date, setDate] = useState(new Date());
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
+  const [name, setName] = useState('')
 
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
@@ -23,7 +24,7 @@ const HomeScreen = ({navigation}) => {
         <View style={{paddingBottom: 50}}>
           <Text>Full name :</Text>
 
-          <TextInput placeholder="....."></TextInput>
+          <TextInput placeholder="....." onChangeText={text => setName(text)}></TextInput>
         </View>
         <Text>Ngay sinh</Text>
         <DatePicker
@@ -33,13 +34,17 @@ const HomeScreen = ({navigation}) => {
           androidVariant="nativeAndroid"
           fadeToColor="#fff"
         />
-       
       </View>
       <Text>Gioi tinh</Text>
-        
-           <Button
-          title="Go"
-          onPress={() => navigation.navigate('Carousel')}></Button>
+
+      <Button
+        title="Go"
+        onPress={() => {
+          navigation.navigate('Carousel', {
+            P1: date.getDate() + 1 + date.getFullYear() + date.getMonth(),
+            P2: name
+          });
+        }}></Button>
     </View>
   );
 };
