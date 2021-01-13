@@ -19,7 +19,7 @@ function isCharacter(char) {
     return num
 }
 const isNumber = char => char >= '0' && char <= '9' 
- function duongDoiSo(date) {
+  function duongDoiSo(date) {
     let num = 0
     for (let i = 0 ; i < date.length ; i++) {
         if (isNumber(date[i])) num += parseInt(date[i])
@@ -42,7 +42,7 @@ function soKhatTam(name) {
     num = laySoDon(num)
     return num
 }
-export default function laySoDon(num) {
+ function laySoDon(num) {
     while (num >= 10) {
          let lnum = num
          let tongCSo = 0
@@ -62,3 +62,4 @@ const todayS = [today.getDate(),today.getMonth() + 1,today.getFullYear()].toStri
 console.log(soNhanCach("nguyen dac son"))
 console.log(soKhatTam("nguyen dac son"))
 console.log(duongDoiSo(todayS))
+export {laySoDon,duongDoiSo,soKhatTam}

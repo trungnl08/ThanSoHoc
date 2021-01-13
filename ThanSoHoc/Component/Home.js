@@ -42,7 +42,7 @@ const HomeScreen = ({navigation}) => {
         onPress={() => {
           navigation.navigate('Carousel', {
             P1: date.getDate() + 1 + date.getFullYear() + date.getMonth(),
-            P2: name
+            P2: name.toLowerCase()
           });
         }}></Button>
     </View>

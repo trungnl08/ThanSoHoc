@@ -8,8 +8,7 @@ import {
   Button,
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-
-import laySoDon from '../thansohoc';
+import {laySoDon, soKhatTam} from '../thansohoc'
 const CarouselScreen = ({route, navigation}) => {
   const {P1,P2} = route.params;
   let duongDoiNgay = laySoDon(parseInt(P1));
@@ -17,7 +16,7 @@ const CarouselScreen = ({route, navigation}) => {
   return (
     <View>
           <Text>This is vmvmvmvmv {duongDoiNgay} </Text>
-          <Text>{P2}</Text>
+          <Text>{soKhatTam(P2)}</Text>
     </View>
   );
 };
