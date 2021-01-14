@@ -10,6 +10,7 @@ import {
 import Carousel from 'react-native-snap-carousel';
 import { laySoDon, soKhatTam } from '../thansohoc'
 import { dataDuongDoi, dataKhatTam } from './data'
+import CarouselT from './caroT'
 
 
 const CarouselScreen = ({route, navigation}) => {
@@ -29,21 +30,12 @@ const CarouselScreen = ({route, navigation}) => {
   check(dataDuongDoi, laySoDon(parseInt(P1)))
   check(dataKhatTam, soKhatTam(P2));
 
-  
-
   return (
     <View>
-          <Text>duong theo ngay sinh {laySoDon(P1)} </Text>
-      <Text> duong khat tam {soKhatTam(P2)}</Text>
-      {setData.map((item, index) => {
-        return (
-          <View  key={index}>
-            <Text>{item.title}</Text>
-            <Text>{item.content}</Text>
-          </View>
-        )
-      })}
+      <CarouselT data={setData}/>
     </View>
+    
+
   );
 };
 export default CarouselScreen;
