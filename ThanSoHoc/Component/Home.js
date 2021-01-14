@@ -21,8 +21,8 @@ const HomeScreen = ({navigation}) => {
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
       <View style={{alignItems: 'center', padding: 10}}>
+        <Text>Full name :</Text>
         <View style={{paddingBottom: 50}}>
-          <Text>Full name :</Text>
 
           <TextInput placeholder="....." onChangeText={text => setName(text)}></TextInput>
         </View>
@@ -41,6 +41,7 @@ const HomeScreen = ({navigation}) => {
         title="Go"
         onPress={() => {
           navigation.navigate('Carousel', {
+            //truyen value input sang carousel screen
             P1: date.getDate() + 1 + date.getFullYear() + date.getMonth(),
             P2: name.toLowerCase()
           });

@@ -62,4 +62,4 @@ const todayS = [today.getDate(),today.getMonth() + 1,today.getFullYear()].toStri
 console.log(soNhanCach("nguyen dac son"))
 console.log(soKhatTam("nguyen dac son"))
 console.log(duongDoiSo(todayS))
-export {laySoDon,duongDoiSo,soKhatTam}
+export {laySoDon,duongDoiSo,soKhatTam,soNhanCach}
