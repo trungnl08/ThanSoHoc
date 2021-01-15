@@ -15,15 +15,10 @@ function soDinhMenh(name) {
        return getNumFromName(name)
 }
 function getNumFromName(name) {
-    const input = name.replace([/[^a-z]+/g,'').toLowerCase()
+    const input = name.replace(/[^a-z]+/g,'').toLowerCase()
     let num = 0
     for (let i = 0 ; i < input.length ; i++) {
-        for (let j = 0 ; j < alb.length ; j++) {
-            if (input[i] === alb[j] ) {
-                num += (j % 9 + 1)
-            }
-        }
-        
+        num += ((input[i].charCodeAt() -96) % 9)
     }
     return laySoDon(num)
 }
