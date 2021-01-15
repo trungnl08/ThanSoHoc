@@ -3,20 +3,29 @@ const name = "Nguyen Dac Son"
 function isCharacter(char) {
     return (char >= 'a' && char <= 'z') || (char >= 'A' && char >= 'Z')
 }
- function soNhanCach(name) {
-    const input = name.toLowerCase()
+function soNhanCach(name) {
+    const input = name.replace(/[ueoai]+/g,'')
+    return getNumFromName(input)
+}
+function soKhatTam(name) {
+    const input = name.replace(/[^ueoai]+/g,'')
+    return getNumFromName(input)
+}
+function soDinhMenh(name) {
+       return getNumFromName(name)
+}
+function getNumFromName(name) {
+    const input = name.replace([/[^a-z]+/g,'').toLowerCase()
     let num = 0
     for (let i = 0 ; i < input.length ; i++) {
-        if (isCharacter(input[i]) && !isNguyenAm(input[i])) {
-            for (let j = 0 ; j < alb.length ; j++) {
-                if (input[i] === alb[j]) {
-                    num += (j % 9 + 1)
-                }
+        for (let j = 0 ; j < alb.length ; j++) {
+            if (input[i] === alb[j] ) {
+                num += (j % 9 + 1)
             }
         }
+        
     }
-    num = laySoDon(num)
-    return num
+    return laySoDon(num)
 }
 const isNumber = char => char >= '0' && char <= '9' 
   function duongDoiSo(date) {
@@ -26,22 +35,7 @@ const isNumber = char => char >= '0' && char <= '9'
     }
     return laySoDon(num)
 }
-const isNguyenAm = char => char === 'u' || char === 'e' || char === 'o' || char === 'a' || char === 'i'
-function soKhatTam(name) {
-    const input = name.toLowerCase()
-    let num = 0
-    for (let i = 0 ; i < input.length ; i++) {
-        if (isNguyenAm(name[i])) {
-            for (let j = 0 ; j < alb.length ; j++) {
-                if (input[i] === alb[j]) {
-                    num += (j % 9 + 1)
-                }
-            }
-        }
-    }
-    num = laySoDon(num)
-    return num
-}
+
  function laySoDon(num) {
     while (num >= 10) {
          let lnum = num
@@ -56,10 +50,5 @@ function soKhatTam(name) {
     }
     return num
 }
-const today = new Date("8/11/2001")
-console.log(today.getMonth());
-const todayS = [today.getDate(),today.getMonth() + 1,today.getFullYear()].toString()
-console.log(soNhanCach("nguyen dac son"))
-console.log(soKhatTam("nguyen dac son"))
-console.log(duongDoiSo(todayS))
+
 export {laySoDon,duongDoiSo,soKhatTam,soNhanCach}
