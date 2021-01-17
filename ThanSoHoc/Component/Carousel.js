@@ -8,8 +8,8 @@ import {
   Button,
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-import { laySoDon, soKhatTam } from '../thansohoc'
-import { dataDuongDoi, dataKhatTam } from './data'
+import { laySoDon, soKhatTam, soNhanCach, soDinhMenh } from '../thansohoc'
+import { dataDuongDoi, dataKhatTam, dataNhanCach, dataDinhMenh } from './data'
 import CarouselT from './caroT'
 
 
@@ -29,6 +29,8 @@ const CarouselScreen = ({route, navigation}) => {
   //push data
   check(dataDuongDoi, laySoDon(parseInt(P1)))
   check(dataKhatTam, soKhatTam(P2));
+  check(dataDinhMenh, soDinhMenh(P2));
+  check(dataNhanCach, soNhanCach(P2));
 
   return (
     <View>
