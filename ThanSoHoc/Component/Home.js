@@ -15,18 +15,21 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 const HomeScreen = ({navigation}) => {
   const [date, setDate] = useState(new Date());
-  const [toggleCheckBox, setToggleCheckBox] = useState(false);
+  const [toggleCheckBox1, setToggleCheckBox1] = useState(false);
+  const [toggleCheckBox2, setToggleCheckBox2] = useState(false);
+  const [toggleCheckBox3, setToggleCheckBox3] = useState(false);
+
   const [name, setName] = useState('')
 
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
       <View style={{alignItems: 'center', padding: 10}}>
-        <Text>Full name :</Text>
+        <Text>Họ và tên</Text>
         <View style={{paddingBottom: 50}}>
 
           <TextInput placeholder="....." onChangeText={text => setName(text)}></TextInput>
         </View>
-        <Text>Ngay sinh</Text>
+        <Text>Ngày sinh</Text>
         <DatePicker
           mode="date"
           date={date}
@@ -35,7 +38,35 @@ const HomeScreen = ({navigation}) => {
           fadeToColor="#fff"
         />
       </View>
-      <Text>Gioi tinh</Text>
+      <Text style={{textAlign:"center"}}>Giới tính</Text>
+      <View style={styles.sex}>
+
+      <View>
+        
+        <Text>Nam</Text>
+        <CheckBox
+    disabled={false}
+    value={toggleCheckBox1}
+    onValueChange={(newValue) => setToggleCheckBox1(newValue)}
+        />
+        </View>
+        <View>
+        <Text>Nữ</Text>
+        <CheckBox
+    disabled={false}
+    value={toggleCheckBox2}
+    onValueChange={(newValue) => setToggleCheckBox2(newValue)}
+  />
+        </View>
+        <View>
+        <Text>Khác</Text>
+        <CheckBox
+    disabled={false}
+    value={toggleCheckBox3}
+    onValueChange={(newValue) => setToggleCheckBox3(newValue)}
+  />
+        </View>
+      </View>
 
       <Button
         title="Go"
@@ -49,4 +80,13 @@ const HomeScreen = ({navigation}) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  sex: {
+    alignItems: "center",
+    flexWrap: "wrap",
+    flexDirection: 'row',
+    justifyContent: "space-around"
+  }
+})
 export default HomeScreen;

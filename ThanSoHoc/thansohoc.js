@@ -46,4 +46,4 @@ const isNumber = char => char >= '0' && char <= '9'
     return num
 }
 
-export {laySoDon,duongDoiSo,soKhatTam,soNhanCach}
+export {laySoDon,duongDoiSo,soKhatTam,soNhanCach, soDinhMenh}
