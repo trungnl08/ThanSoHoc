@@ -6,6 +6,7 @@ import {
   Text,
   TextInput,
   Button,
+  
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import { laySoDon, soKhatTam, soNhanCach, soDinhMenh } from '../thansohoc'
