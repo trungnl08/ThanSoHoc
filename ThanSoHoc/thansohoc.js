@@ -45,5 +45,7 @@ const isNumber = char => char >= '0' && char <= '9'
     }
     return num
 }
-
+function soTuVi(num) {
+    
+}
 export {laySoDon,duongDoiSo,soKhatTam,soNhanCach, soDinhMenh}
