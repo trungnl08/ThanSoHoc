@@ -18,9 +18,10 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 const HomeScreen = ({navigation}) => {
   const [date, setDate] = useState(new Date('2000-06-28'));
-  const [toggleCheckBox1, setToggleCheckBox1] = useState(false);
-  const [toggleCheckBox2, setToggleCheckBox2] = useState(false);
-  const [toggleCheckBox3, setToggleCheckBox3] = useState(false);
+  const [gender, setGender] = useState("male");
+  //const [toggleCheckBox1, setToggleCheckBox1] = useState(false);
+  //const [toggleCheckBox2, setToggleCheckBox2] = useState(false);
+  //const [toggleCheckBox3, setToggleCheckBox3] = useState(false);
 
   const [name, setName] = useState('');
 
@@ -54,36 +55,24 @@ const HomeScreen = ({navigation}) => {
           <Text style={styles.smallSex}>Nam</Text>
           <CheckBox
             disabled={false}
-            value={toggleCheckBox1}
-            onValueChange={(newValue) => {
-              setToggleCheckBox1(newValue),
-                setToggleCheckBox2(!newValue),
-                setToggleCheckBox3(!newValue);
-            }}
+            value={gender === 'male'}
+            onValueChange={() => setGender('male')}
           />
         </View>
         <View>
           <Text style={styles.smallSex}>Nữ</Text>
           <CheckBox
             disabled={false}
-            value={toggleCheckBox2}
-            onValueChange={(newValue) => {
-              setToggleCheckBox2(newValue),
-                setToggleCheckBox1(!newValue),
-                setToggleCheckBox3(!newValue);
-            }}
+            value={gender === 'female'}
+            onValueChange={() => setGender('female')}
           />
         </View>
         <View>
           <Text style={styles.smallSex}>Khác</Text>
           <CheckBox
             disabled={false}
-            value={toggleCheckBox3}
-            onValueChange={(newValue) => {
-              setToggleCheckBox3(newValue),
-                setToggleCheckBox2(!newValue),
-                setToggleCheckBox1(!newValue);
-            }}
+            value={gender === 'others'}
+            onValueChange={() => setGender('others')}
           />
         </View>
       </View>
