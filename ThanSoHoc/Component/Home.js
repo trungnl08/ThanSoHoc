@@ -25,25 +25,28 @@ const HomeScreen = ({navigation}) => {
   const [name, setName] = useState('');
 
   return (
-    <KeyboardAvoidingView style={styles.all} behavior={Platform.OS=== 'ios' ? 'padding' : "height"}>
-      <ImageBackground source={require('./3294878.jpg')} style={{flex:1, resizeMode:'cover'}}>
-      <View style={{alignItems: 'center', padding: 10, paddingTop: 60}}>
-        <Text>Họ và tên</Text>
-        <View style={{paddingBottom: 50}}>
+    <KeyboardAvoidingView style={styles.all} >
+      <ImageBackground source={require('./583.jpg')} style={{flex:1, resizeMode:'cover'}}>
+      <View style={{alignItems: 'center', padding: 10, paddingTop: 60,}}>
+        <Text style={{paddingBottom:13, color:'#fff'}}>Họ và tên</Text>
+        <View style={styles.names}>
           <TextInput
             placeholder="Nhập tên đầy đủ ..."
             onChangeText={(text) => setName(text)}></TextInput>
         </View>
-        <Text>Ngày sinh</Text>
+        <Text style={{paddingBottom:15, paddingTop:15}}>Ngày sinh</Text>
         <DatePicker
           mode="date"
           date={date}
           onDateChange={setDate}
           androidVariant="nativeAndroid"
-          fadeToColor="#fff"
+            fadeToColor="#fff"
+            backgroundColor='#e5e5eb'
+            
+            
         />
       </View>
-      <Text style={{textAlign: 'center', paddingBottom: 30, paddingTop: 20}}>
+      <Text style={{textAlign: 'center', paddingBottom: 20, paddingTop: 20}}>
         Giới tính
       </Text>
       <View style={styles.sex}>
@@ -126,6 +129,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     flex: 1,
     fontSize: 14,
+    
   },
+  names: {
+    borderColor: '#E5E5EA',
+    borderWidth: 0.6,
+    backgroundColor: '#F1F1F3',
+    borderRadius: 7,
+    padding: 3,
+    width: '80%',
+    opacity:0.7
+  }
 });
 export default HomeScreen;

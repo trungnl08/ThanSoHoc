@@ -1,18 +1,20 @@
 import React from 'react'
-import { View, StyleSheet, Text, Image, Dimensions } from 'react-native'
+import { View, StyleSheet, Text, Image, Dimensions,ImageBackground } from 'react-native'
 
 const { width, height } = Dimensions.get('window')
 
 
 const CarouselItem = ({ item }) => {
     return (
-        <View style={styles.cardView}>
-            <View >
-                <Text > {item.title}</Text>
-                <Text >{item.num}</Text>
-                <Text >{item.content}</Text>
+        // <View style={styles.cardView}>
+                <ImageBackground source={require('./4847243.jpg')} style={styles.cardView}>
+            <View style={styles.text}>
+                <Text style={styles.title} > {item.title}</Text>
+                <Text style={styles.num}>{ item.num}</Text>
+                <Text style={styles.content}>{item.content}</Text>
             </View>
-        </View>
+                </ImageBackground>
+        // </View>
     )
 }
 
@@ -20,7 +22,7 @@ const styles = StyleSheet.create({
     cardView: {
         flex: 1,
         width: width - 20,
-        height: height / 3,
+        height: height / 2.5,
         backgroundColor: 'white',
         margin: 10,
         borderRadius: 10,
@@ -29,39 +31,24 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowRadius: 3,
         elevation: 5,
+        overflow: 'hidden',
     },
-
-    textView: {
-        position: 'absolute',
-        bottom: 10,
-        margin: 10,
-        left: 5,
+    text: {
+        alignItems: "center",
+        padding: 15,
     },
-    image: {
-        width: width - 20,
-        height: height / 3,
-        borderRadius: 10
+    title: {
+        fontSize: 25,
+        fontWeight: '600',
+        fontStyle:'italic'
     },
-    itemTitle: {
-        color: 'white',
-        fontSize: 22,
-        shadowColor: '#000',
-        shadowOffset: { width: 0.8, height: 0.8 },
-        shadowOpacity: 1,
-        shadowRadius: 3,
-        marginBottom: 5,
-        fontWeight: "bold",
-        elevation: 5
+    num: {
+        fontSize:36
+        
     },
-    itemDescription: {
-        color: 'white',
-        fontSize: 12,
-        shadowColor: '#000',
-        shadowOffset: { width: 0.8, height: 0.8 },
-        shadowOpacity: 1,
-        shadowRadius: 3,
-        elevation: 5
-    }
+    content: {
+        fontSize:16
+    },
 })
 
 export default CarouselItem
