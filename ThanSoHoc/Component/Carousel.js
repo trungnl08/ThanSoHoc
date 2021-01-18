@@ -10,8 +10,8 @@ import {
   ImageBackground,
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-import {laySoDon, soKhatTam, soNhanCach, soDinhMenh} from '../thansohoc';
-import {dataDuongDoi, dataKhatTam, dataNhanCach, dataDinhMenh} from './data';
+import { soKhatTam, soNhanCach, soDinhMenh, duongDoiSo} from '../thansohoc';
+import {dataDuongDoi, dataKhatTam, dataNhanCach, dataDinhMenh,dataTuVi} from './data';
 import CarouselT from './caroT';
 
 const CarouselScreen = ({route, navigation}) => {
@@ -27,15 +27,16 @@ const CarouselScreen = ({route, navigation}) => {
     }
   };
   //push data
-  check(dataDuongDoi, laySoDon(parseInt(P1)));
+  check(dataDuongDoi, duongDoiSo(P1));
+  check(dataNhanCach, soNhanCach(P2));
   check(dataKhatTam, soKhatTam(P2));
   check(dataDinhMenh, soDinhMenh(P2));
-  check(dataNhanCach, soNhanCach(P2));
+  check(dataTuVi, (duongDoiSo(P1)%9))
 
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
       <ImageBackground source={require('./91317.jpg')} style={styles.bg}>
-        <View style={{paddingTop: '37%', paddingBottom: 18}}>
+        <View style={{paddingTop: '30%', paddingBottom: 18}}>
           <CarouselT data={setData} />
         </View>
         <TouchableOpacity

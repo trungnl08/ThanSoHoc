@@ -25,7 +25,7 @@ const HomeScreen = ({navigation}) => {
   return (
     <KeyboardAvoidingView style={styles.all}>
       <ImageBackground
-        source={require('./91317.jpg')}
+        source={require('./tet.jpg')}
         style={{flex: 1,position:'absolute',width:'100%', height:'100%'}}>
         <View style={{alignItems: 'center', padding: 10, paddingTop: 22}}>
           <Text style={styles.title}>Tên đầy đủ</Text>
@@ -77,7 +77,7 @@ const HomeScreen = ({navigation}) => {
             onPress={() => {
               navigation.navigate('Carousel', {
                 //truyen value input sang carousel screen
-                P1: date.getDate() + 1 + date.getFullYear() + date.getMonth(),
+                P1: date.getDate() + 1 +'/'+ date.getFullYear()+'/' + date.getMonth(),
                 P2: name.toLowerCase(),
               });
             }}
