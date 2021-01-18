@@ -6,6 +6,8 @@ import {
   Text,
   TextInput,
   Button,
+  TouchableOpacity,
+  ImageBackground
   
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
@@ -34,11 +36,27 @@ const CarouselScreen = ({route, navigation}) => {
   check(dataNhanCach, soNhanCach(P2));
 
   return (
-    <View>
+    <View style={{backgroundColor:'#fff', flex:1}}>
+      <ImageBackground source={require('./4238568.jpg')} style={styles.bg}>
+    <View style={{paddingTop:"37%", paddingBottom:18}}>
       <CarouselT data={setData}/>
+      </View>
+        <TouchableOpacity onPress={()=> navigation.navigate('Home')} style={styles.button}>
+        <Text>bubmbmbmbm</Text>
+        </TouchableOpacity>
+      </ImageBackground>
     </View>
     
 
   );
 };
+
+const styles = StyleSheet.create({
+  button: {
+    alignItems:"center",alignSelf:'center', backgroundColor:'#3d7afc', padding:4
+  },
+  bg: {
+    flex:1, resizeMode:'cover'
+  }
+})
 export default CarouselScreen;
