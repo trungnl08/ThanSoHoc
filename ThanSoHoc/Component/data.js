@@ -60,55 +60,55 @@ const dataKhatTam= [
         src:require('./2.jpg'),
         title:'Con số khát tâm',
         num: 1,
-        content:'Bạn là người mang tính cạnh tranh cao và cảm thấy thỏa mãn khi giành chiến thắng trong tất cả những cuộc thi hoặc trong việc làm nào đó'
+        content:'Khát Tâm Số 1 thể hiện khát khao trong bạn chính là mong muốn trở thành người đầu tiên làm một cái gì đó, là người tiên phong trong mọi lĩnh vực và khát khao thành công sau những cố gắng. Bên trong bạn có tham vọng mãnh liệt, thích điều khiển và kiểm soát người khác ở một mức độ nhất định. Thành công dường như đến với bạn một cách tự nhiên, tỉ lệ này sẽ cao khi tri thức của bạn phù hợp với mục đích trong linh hồn bạn.'
     },
     {
         src:require('./2.jpg'),
         title:'Con số khát tâm',
         num: 2,
-        content:'Bạn cần sự cân bằng, hài hòa , an yên, và tình yêu để luôn cảm thấy đầy đủ, mãn nguyện.'
+        content:'Khát Tâm Số 2  là người hợp tác, người dễ chịu và thân thiện, thậm chí là mang tính phụ thuộc cao. Bạn được trời phú cho những khả năng về trực giác và nhạy cảm, nó sẽ có giá trị hơn khi bạn biết vận dụng nó để phục vụ cho thế giới. Sứ mệnh của bạn khi sinh ra là phải đem lại lợi ích cho người khác, sự khiêm tốn trong bạn sẽ tạo điều kiện đem đến sức mạnh cho bạn để bạn có tinh thần thực hiện sứ mệnh của mình tốt hơn.'
     },
     {
         src:require('./2.jpg'),
         title:'Con số khát tâm',
         num: 3,
-        content:'Bạn thích tương tác với xã hội, được gắn kết với cộng đồng và thể hiện khả năng của mình khiến bạn hạnh phúc'
+        content:'Khát Tâm Số 3 cho thấy bạn có khát khao hướng đến việc thể hiện khả năng sáng tạo của mình. Việc bạn sử dụng sự sáng tạo có thể sẽ đem lại nhiều lợi ích cho bạn, có thể bạn sẽ thu hút được ánh mắt của tất cả mọi người. Một phần bạn thu hút cũng vì năng lượng số 3 luôn tỏa ra niềm vui và tính chất hài hòa, mọi người ở bên cạnh bạn cũng đều cảm thấy vui vẻ, hạnh phúc và tràn đầy sức sống.'
     },
     {
         src:require('./2.jpg'),
         title:'Con số khát tâm',
         num: 4,
-        content:'Bạn khao khát chứng minh những kiến thức của mình, được mọi người công nhận kiến thức và chuyên môn làm bạn thấy thỏa mãn.'
+        content:'Khi bạn mang trong mình Khát Tâm Số 4, bạn sẽ không còn vướng phải những vấn đề sử dụng sự sáng tạo quá nhiều, bạn sẽ biết cách đưa niềm khát khao của mình vào đúng hướng, đó là lý do Khát Tâm Số 4 thường dẫn con người đến thành công vì sâu thẳm trong họ luôn muốn bản thân cố gắng làm xong hết mọi thứ, họ tự đặt mục tiêu, tự hoàn thành nó một cách từ từ, chậm rãi và có phương pháp riêng của họ.'
     },
     {
         src:require('./2.jpg'),
         title:'Con số khát tâm',
         num: 5,
-        content:'Bạn là một linh hồn tự do, không có gì quý hơn và đáng trân trọng hơn bằng sự tự do.'
+        content:'Khát Tâm Số 5 gắn liền với niềm khát khao tự do sâu sắc. Số 5 đại diện cho hình ảnh của người tìm kiếm, thích phiêu lưu hoặc người có dục vọng cao, đôi khi có thể lâm vào tình trạng nghiện. Số 5 có sự liên quan đến năm giác quan trong mỗi con người, từ đó suy ra số 5 có ảnh hướng đến quá trình nhận thức và khám phá thế giới của mỗi con người. Nó còn là cầu nối cho những khả năng của giác quan chạm đến sự thỏa mãn bên trong hoặc thuộc về khía cạnh tâm linh. '
     },
     {
         src:require('./2.jpg'),
         title:'Con số khát tâm',
         num: 6,
-        content:'Bạn là người có nhu cầu mạnh mẽ về những nổ lực nuôi dưỡng của bạn được ghi nhận và đánh giá cao.'
+        content:'Người mang trong mình Khát Tâm Số 6 có một mong muốn bí mật đó chính là họ thích bản thân trở nên thanh lịch và duyên dáng, họ muốn trước mặt mọi người họ luôn là một hình mẫu hoàn hảo, ai cũng muốn noi theo họ. Đây không hẳn là một khát khao ích kỷ, sĩ diện, đây cũng là một cách phấn đấu để hoàn thiện bản thân cho đúng với sự hoàn hảo mình có được, khi bản thân tốt đẹp thì mới có thể giúp đỡ người khác. Mong muốn lớn nhất của Khát Tâm Số 6 vẫn là đem lại sự hài hòa đến cho thế giới, nhưng một lúc nào đó, họ cũng cần phải đưa ra sự suy xét cho vấn đề này.'
     },
     {
         src:require('./2.jpg'),
         title:'Con số khát tâm',
         num: 7,
-        content:'Bạn cảm thấy hài lòng khi mà có thời gian và một không gian vừa đủ để theo đuổi hành trình tâm linh của mình.'
+        content:'Số 7 là con số của những gì thuộc về tinh thần, tâm linh, nó là sự kết hợp của số 3 (sự sáng tạo) và số 4 (sự hoàn hảo). Sự kết hợp này tựa như trời và đất – số 3 thì có xu hướng "thăng thiên", số 4 thì lại vững chãi dưới mặt đất. Nhìn chung 7 là con số của may mắn và tính nguyên mẫu, nó thể hiện sự hoàn chỉnh, an toàn và an yên. Người mang trong mình Khát Tâm Số 7 là người có khát khao chinh phục tất cả những kiến thức để bản thân gặt hái được những thành quả về tinh thần cao hơn, có được những bài học về tâm linh, tri thức.'
     },
     {
         src:require('./2.jpg'),
         title:'Con số khát tâm',
         num: 8,
-        content:'Địa vị, tự do tài chính và thành công về vật chất, tiền bạc sẽ khiến cho bạn cảm thấy hạnh phúc.'
+        content:'Số 8 gắn liền với khía cạnh vật chất và thực tế, là một trong ba con số quyền lực nhất (7, 8, 9) . Nó quyền lực bởi vì đây là những con số nắm giữ thế giới vật chất như tiền bạc, tài chính, những vấn đề pháp lý và quyền lực chính trị. Người mang trong mình Khát Tâm Số 8 là những người khao khát trở nên giàu có và thật nhiều tài sản, họ luôn muốn trong tay mình có nhiều của cải, đối với họ một khi đã có nhiều tiền nghĩa là sẽ có quyền lực, và đương nhiên là họ sẽ làm được điều đó.'
     },
     {
         src:require('./2.jpg'),
         title:'Con số khát tâm',
         num: 9,
-        content:'Được đấu tranh cho bản thân và đóng góp công sức cho nhân loại sẽ khiến bạn cảm thấy đông đầy.'
+        content:'Số 9 là số cao nhất trong tất cả dãy Thần Số Học và nó cũng chính là mức năng lượng tâm linh cao nhất. Những người bị ảnh hưởng bởi số 9 thường có xu hướng hành động vì mọi người, thích hào phóng và giúp đỡ người khác, ngay cả khi việc đó có thể gây tổn hại đến mình. Số 9 còn gắn liền với trí tuệ tâm linh, trực giác và tầm nhìn xa trông rộng về cuộc đời này nhất. Người mang trong mình Khát Tâm Số 9 mang trong mình khát khao lấn át cả tính cách, và bạn không ngần ngại thể hiện điều này ra bên ngoài. Bạn hào phóng, rộng lượng, không nhỏ nhen ích kỷ với mọi người, đặc biệt là mang trong mình lý tưởng sống cao cả. '
     },
   
 ]
