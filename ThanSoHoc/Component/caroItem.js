@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   title: {
-    fontSize: 25,
+    fontSize: 28,
     fontWeight: '600',
     fontFamily: 'helveticaneueitalic',
   },
