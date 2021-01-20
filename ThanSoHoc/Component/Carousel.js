@@ -30,14 +30,14 @@ const CarouselScreen = ({route, navigation}) => {
   check(dataDuongDoi, duongDoiSo(P1));
   check(dataNhanCach, soNhanCach(P2));
   check(dataKhatTam, soKhatTam(P2));
-  check(dataTuVi, (duongDoiSo(P1)%9))
+  check(dataTuVi, duongDoiSo(P1))
   check(dataDinhMenh, soDinhMenh(P2));
-  check(data1Nua, duongDoiSo(P1));
+  check(data1Nua, (10- duongDoiSo(P1)));
 
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
       <ImageBackground source={require('./91317.jpg')} style={styles.bg}>
-        <View style={{paddingTop: '30%', paddingBottom: 18}}>
+        <View style={{paddingTop: '26%', paddingBottom: 18}}>
           <CarouselT data={setData} />
         </View>
         <TouchableOpacity
