@@ -239,57 +239,66 @@ const dataDinhMenh= [
 const dataTuVi = [
     {
         src:require('./5.jpg'),
-        title:'Khả năng tiềm ẩn',
+        title:'Sức mạnh tiềm ẩn',
         num: 1,
-        content:'Nhóm thiên về Tư duy. Bạn là những người có học vấn cao, thích đi lại, và có nhu cầu sử dụng năng lượng cao của họ theo cách lành mạnh.Để những người thuộc số này thoát ra khỏi dòng tư duy trong đầu và hòa mình vào cuộc sống nhiều hơn, đó là sống giữa thiên nhiên, và thể dục thể thao.'
+        special:'SỰ SÁNG TẠO',
+        content:'Những người sinh ra từ con số này có khả năng kiểm soát và điều chỉnh năng lực của mình để tạo ra những thứ mà họ mong muốn. Có thể nói, bạn biết mình muốn gì, cần gì và biết cách để đạt được mục tiêu của mình. Tuy nhiên, sức mạnh này chỉ có thể phát huy tối đa khi bạn biết dùng nó một cách hợp lý.'
     },
     {
         src:require('./5.jpg'),
-        title:'Khả năng tiềm ẩn',
+        title:'Sức mạnh tiềm ẩn',
         num: 2,
-        content:'Nhóm thiên về Thực tế. Bạn là người quan tâm đến tình cảm, tình yêu.'
+        special:'SỰ THẤU HIỂU',
+        content:' Bạn là người cực kỳ nhạy cảm, luôn quan sát và để ý tất cả mọi thứ xung quanh mình. Có thể nói, phần lớn kiến thức bạn có được là nhờ quá trình học hỏi từ mọi người cũng như sự vật hiện tượng diễn ra trong cuộc sống của bạn. Đó cũng là lý do bạn dễ mủi lòng trước câu chuyện của người khác. Sức mạnh tiềm ẩn trong bạn là sự thấu hiểu, bạn dùng nó để xoa dịu vết thương lòng của người khác. Tuy nhiên, bạn cũng đừng quên không ngừng làm mới bản thân và xoa dịu chính mình những khi cần thiết.'
     },
     {
         src:require('./5.jpg'),
-        title:'Khả năng tiềm ẩn',
+        title:'Sức mạnh tiềm ẩn',
         num: 3,
-        content:'Nhóm thiên về Sáng tạo. Bạn thích hợp với các lĩnh vực nghệ thuật: âm nhạc, hội họa, sân khấu…'
+        special:'TÁI SINH VÀ HỦY DIỆT',
+        content:' Bên trong bạn tồn tại nguồn năng lượng của cả sự tái sinh và hủy diệt. Mọi suy nghĩ và mong muốn của bạn đều có thể nhanh chóng thành hiện thực tùy theo hướng mà bạn đang nghĩ. Có nghĩa là, nếu bạn mong muốn điều tốt đẹp cho người khác, điều đó sẽ xảy ra như ước nguyện của bạn và ngược lại. Thế nên, hãy cẩn thận với những mong muốn của mình.'
     },
     {
         src:require('./5.jpg'),
-        title:'Khả năng tiềm ẩn',
+        title:'Sức mạnh tiềm ẩn',
         num: 4,
-        content:'Nhóm thiên về thực tế. Bạn là người quan tâm đến sự an toàn, xây dựng nền tảng của mọi việc trong cuộc sống.'
+        special:'SỰ VỮNG VÀNG',
+        content:'Con số này tượng trưng cho 4 yếu tố của Trái Đất: Đất, Nước, Lửa, Khí. Sự cân bằng là “món quà bí ẩn” mà bạn được ban tặng. Bạn sở hữu một tâm trí vô cùng vững vàng. Trước mọi tình huống của cuộc sống, bạn luôn trong tâm thế bình tĩnh. Nhờ có sự trợ giúp của 4 yếu tố này, dường như ít ai có thể ảnh hưởng được bạn. Dù cho một người nào đó cố tình gây hấn với bạn thì bằng sức mạnh của mình, bạn cũng sẽ không để chuyện đó xảy ra.'
     },
     {
         src:require('./5.jpg'),
-        title:'Khả năng tiềm ẩn',
+        title:'Sức mạnh tiềm ẩn',
         num: 5,
-        content:'Nhóm thiên về Tư duy.Bạn là những người có học vấn cao, thích đi lại, và có nhu cầu sử dụng năng lượng cao của họ theo cách lành mạnh.Để những người thuộc số này thoát ra khỏi dòng tư duy trong đầu và hòa mình vào cuộc sống nhiều hơn, đó là sống giữa thiên nhiên, và thể dục thể thao.'
+        special:'TÂM LINH',
+        content:' Những người sinh ra từ con số này sẽ có khả năng cảm nhận những sự vật hiện tượng thuộc về tâm linh dễ dàng hơn người khác, thậm chí họ còn có thể hiểu được những kiến thức vượt ngoài sự hiểu biết của người bình thường.'
     },
     {
         src:require('./5.jpg'),
-        title:'Khả năng tiềm ẩn',
+        title:'Sức mạnh tiềm ẩn',
         num: 6,
-        content:'Nhóm thiên về Sáng tạo. Bạn thích hợp với các lĩnh vực nghệ thuật: âm nhạc, hội họa, sân khấu…'
+        special:'NGUỒN NĂNG LƯỢNG BẤT TẬN',
+        content:'Số 6 tượng trưng cho biểu tượng Mặt trời. Vì thế, “món quà” mà những người sinh ra từ con số này nhận được là nguồn năng lượng bất tận. Có thể thấy rằng, bạn luôn cố gắng hết mình, tràn đầy sức sống và nhiệt huyết cho mọi hoạt động trong cuộc sống của mình và luôn tìm cách để lan tỏa nguồn năng lượng ấy đến những người xung quanh. Bạn có khả năng xoa dịu người khác và có tố chất của một nhà lãnh đạo. Tuy nhiên, năng lượng càng nhiều thì trách nhiệm trên vai bạn càng lớn. Hãy học cách sử dụng sức mạnh của mình một cách hợp lý bạn nhé.'
     },
     {
         src:require('./5.jpg'),
-        title:'Khả năng tiềm ẩn',
+        title:'Sức mạnh tiềm ẩn',
         num: 7,
-        content:'Nhóm thiên về Tư duy.Bạn là những người có học vấn cao, thích đi lại, và có nhu cầu sử dụng năng lượng cao của họ theo cách lành mạnh.Để những người thuộc số này thoát ra khỏi dòng tư duy trong đầu và hòa mình vào cuộc sống nhiều hơn, đó là sống giữa thiên nhiên, và thể dục thể thao.'
+        special:'QUYỀN NĂNG',
+        content:'TRỰC GIÁC. Số 7 tượng trưng cho biểu tượng mặt trăng và “món quà” bạn nhận được từ sinh nhật của mình là trực giác nhanh nhạy. Khi một tình huống bất ngờ ập tới, bạn luôn dễ dàng ứng phó bởi trực giác luôn nói cho bạn biết bạn nên và phải làm gì trong tình huống ấy. Ngoài ra, sức mạnh tiềm ẩn trong bạn là những giấc mơ. Bạn có thể “thấy” được nhiều điều thông qua giấc mơ của mình, nếu bạn thấu hiểu và lý giải được ý nghĩa sâu xa của chúng.'
     },
     {
         src:require('./5.jpg'),
-        title:'Khả năng tiềm ẩn',
+        title:'Sức mạnh tiềm ẩn',
         num: 8,
-        content:'Nhóm thiên về thực tế. Bạn là người quan tâm đến ổn định về tài chính và làm những thứ to lớn trong tương lai.'
+        special:'QUYỀN NĂNG',
+        content:' Số 8 được cho một trong những con số quyền năng nhất vì nó tượng trưng 8 góc của thế giới. Nếu sinh nhật của bạn có tổng là 8, có một dòng sức mạnh ma thuật đang chảy trong người bạn, nhưng sức mạnh ấy chỉ có thể được kích hoạt khi và chỉ khi lý trí và tình cảm của bạn hòa lại thành một. Có thể nói rằng, sức mạnh bạn đang sở hữu như một chiếc la bàn có thể dẫn dắt bạn trở về khi bạn đi sai hướng.'
     },
     {
         src:require('./5.jpg'),
-        title:'Khả năng tiềm ẩn',
+        title:'Sức mạnh tiềm ẩn',
         num: 9,
-        content:'Nhóm thiên về Sáng tạo. Bạn thích hợp với các lĩnh vực nghệ thuật: âm nhạc, hội họa, sân khấu…'
+        special : 'SỨC MẠNH TỔNG HỢP',
+        content:'Những người có kết quả ngày sinh là con số này thường có khả năng sáng tạo bất tận, thấy được những điều mà người khác không thấy. Bên cạnh đó, bạn còn dễ dàng cảm nhận và thấu hiểu mọi thứ trong cuộc sống, tuy nhiên, sự hủy diệt cũng có thể xảy ra nếu trong đầu bạn tồn tại suy nghĩ này. Có quá nhiều sức mạnh, đôi khi cũng không phải là điều tốt. Tuy nhiên, nếu biết cách kiểm soát và làm chủ được chúng, bạn sẽ có được cả thế giới trong tay.'
     },
 ]
 const data1Nua = [

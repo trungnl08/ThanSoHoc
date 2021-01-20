@@ -20,14 +20,14 @@ import {createStackNavigator} from '@react-navigation/stack';
 const HomeScreen = ({navigation}) => {
   const [date, setDate] = useState(new Date('2000-06-28'));
   const [gender, setGender] = useState('');
-  const [name, setName] = useState('');
+  const [name, setName] = useState('others');
 
   return (
     <KeyboardAvoidingView style={styles.all}>
       <ImageBackground
-        source={require('./tet.jpg')}
+        source={require('./91317.jpg')}
         style={{flex: 1,position:'absolute',width:'100%', height:'100%'}}>
-        <View style={{alignItems: 'center', padding: 10, paddingTop: 22}}>
+        <View style={{alignItems: 'center', padding: 8, paddingTop: 22}}>
           <Text style={styles.title}>Tên đầy đủ</Text>
           <View style={styles.names}>
             <TextInput
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     padding: 3,
     width: '80%',
-    opacity: 0.7,
+    opacity: 0.75,
   },
   title: {
     fontFamily: 'helveticaneuelight',

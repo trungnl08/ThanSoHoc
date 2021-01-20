@@ -16,6 +16,7 @@ const CarouselItem = ({item}) => {
       <View style={styles.text}>
         <Text style={styles.title}> {item.title}</Text>
         <Text style={styles.num}>{item.num}</Text>
+        <Text style={styles.spec}>{item.special}</Text>
         <Text style={styles.content}>{item.content}</Text>
       </View>
     </ImageBackground>
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
   cardView: {
     flex: 1,
     width: width - 20,
-    height: height / 1.85,
+    height: height / 1.7,
     backgroundColor: 'white',
     margin: 10,
     borderRadius: 10,
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
   },
   text: {
     alignItems: 'center',
-    padding: 15,
+    padding: 8,
   },
   title: {
     fontSize: 28,
@@ -47,13 +48,18 @@ const styles = StyleSheet.create({
     fontFamily: 'helveticaneueitalic',
   },
   num: {
-    fontSize: 50,
+    fontSize: 45,
     fontFamily: 'helveticaneuemedium',
   },
   content: {
     fontSize: 16,
     fontFamily: 'helveticaneue',
   },
+  spec: {
+    fontSize: 19,
+    fontWeight: '500',
+    fontFamily:'helveticaneuemedium'
+  }
 });
 
 export default CarouselItem;
