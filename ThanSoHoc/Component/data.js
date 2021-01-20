@@ -239,57 +239,114 @@ const dataDinhMenh= [
 const dataTuVi = [
     {
         src:require('./5.jpg'),
-        title:'Con số tử vi',
+        title:'Khả năng tiềm ẩn',
         num: 1,
         content:'Nhóm thiên về Tư duy. Bạn là những người có học vấn cao, thích đi lại, và có nhu cầu sử dụng năng lượng cao của họ theo cách lành mạnh.Để những người thuộc số này thoát ra khỏi dòng tư duy trong đầu và hòa mình vào cuộc sống nhiều hơn, đó là sống giữa thiên nhiên, và thể dục thể thao.'
     },
     {
         src:require('./5.jpg'),
-        title:'Con số tử vi',
+        title:'Khả năng tiềm ẩn',
         num: 2,
         content:'Nhóm thiên về Thực tế. Bạn là người quan tâm đến tình cảm, tình yêu.'
     },
     {
         src:require('./5.jpg'),
-        title:'Con số tử vi',
+        title:'Khả năng tiềm ẩn',
         num: 3,
         content:'Nhóm thiên về Sáng tạo. Bạn thích hợp với các lĩnh vực nghệ thuật: âm nhạc, hội họa, sân khấu…'
     },
     {
         src:require('./5.jpg'),
-        title:'Con số tử vi',
+        title:'Khả năng tiềm ẩn',
         num: 4,
         content:'Nhóm thiên về thực tế. Bạn là người quan tâm đến sự an toàn, xây dựng nền tảng của mọi việc trong cuộc sống.'
     },
     {
         src:require('./5.jpg'),
-        title:'Con số tử vi',
+        title:'Khả năng tiềm ẩn',
         num: 5,
         content:'Nhóm thiên về Tư duy.Bạn là những người có học vấn cao, thích đi lại, và có nhu cầu sử dụng năng lượng cao của họ theo cách lành mạnh.Để những người thuộc số này thoát ra khỏi dòng tư duy trong đầu và hòa mình vào cuộc sống nhiều hơn, đó là sống giữa thiên nhiên, và thể dục thể thao.'
     },
     {
         src:require('./5.jpg'),
-        title:'Con số tử vi',
+        title:'Khả năng tiềm ẩn',
         num: 6,
         content:'Nhóm thiên về Sáng tạo. Bạn thích hợp với các lĩnh vực nghệ thuật: âm nhạc, hội họa, sân khấu…'
     },
     {
         src:require('./5.jpg'),
-        title:'Con số tử vi',
+        title:'Khả năng tiềm ẩn',
         num: 7,
         content:'Nhóm thiên về Tư duy.Bạn là những người có học vấn cao, thích đi lại, và có nhu cầu sử dụng năng lượng cao của họ theo cách lành mạnh.Để những người thuộc số này thoát ra khỏi dòng tư duy trong đầu và hòa mình vào cuộc sống nhiều hơn, đó là sống giữa thiên nhiên, và thể dục thể thao.'
     },
     {
         src:require('./5.jpg'),
-        title:'Con số tử vi',
+        title:'Khả năng tiềm ẩn',
         num: 8,
         content:'Nhóm thiên về thực tế. Bạn là người quan tâm đến ổn định về tài chính và làm những thứ to lớn trong tương lai.'
     },
     {
         src:require('./5.jpg'),
-        title:'Con số tử vi',
+        title:'Khả năng tiềm ẩn',
         num: 9,
         content:'Nhóm thiên về Sáng tạo. Bạn thích hợp với các lĩnh vực nghệ thuật: âm nhạc, hội họa, sân khấu…'
     },
 ]
-export {dataDuongDoi, dataKhatTam,dataNhanCach,dataDinhMenh,dataTuVi}
+const data1Nua = [
+    {
+        src:require('./luv2.jpg'),
+        title:'Một nửa của bạn',
+        num: 1,
+        content:'Với số 1, bạn nên tìm người yêu có “số đường đời” là 3, 5 và 6. Đôi khi bạn rất bảo thủ và chỉ hành động theo ý của mình. Những người số 3 và 5 có thể dễ dàng hòa hợp với những người có đặc điểm tính cách như vậy. Là số 1, bạn có thể hơi nghiêm túc và căng thẳng trong nhiều tình huống. Nhưng với thái độ hiền hòa và vui vẻ, những người số 3 dễ dàng giúp bạn cảm thấy tốt hơn và cân bằng hơn. Số 5 có thể mang đến cho bạn một sự rung động tích cực và điều này sẽ tiếp thêm năng lượng cho mối quan hệ của cả hai. Những người số 6 cũng có thể là một đối tượng tuyệt vời dành cho bạn vì họ rất hòa đồng, biết quan tâm và yêu thương người khác.'
+    },
+    {
+        src:require('./luv2.jpg'),
+        title:'Một nửa của bạn',
+        num: 2,
+        content:'Với số 2, bạn sẽ rất phù hợp với “số đường đời” 6, 8 và 9. Vì bạn là một người rất giàu năng lượng, sống hài hòa và bản lĩnh nên có thể dễ dàng đối phó với những thử thách khó khăn nhất. Do đó, bạn tự nhiên tương thích với số 8 vì họ có xu hướng thiếu quyết đoán. Cả hai bạn sẽ mang lại sự cân bằng cho cuộc sống của nhau. Số 9 có một số đặc điểm tương đồng với bạn như thông minh, bản lĩnh… Bên cạnh đó, sự hài hước của họ sẽ giúp mối quan hệ luôn vui vẻ và thú vị. Cuối cùng, số 6 cũng là một sự lựa chọn tuyệt vời trong hành trình tìm người yêu của bạn vì họ sống rất tình cảm.'
+    },
+    {
+        src:require('./luv2.jpg'),
+        title:'Một nửa của bạn',
+        num: 3,
+        content:'Là số 3, bạn phù hợp nhất với số 1, 5 và 7. Là một người rất sáng tạo, độc lập và đôi khi hơi “khó chiều”, bạn sẽ kết hợp hoàn hảo với số 5 vì họ có khả năng cân bằng bản chất khó đoán của bạn. Số 5 rất can đảm và ưa mạo hiểm nên họ sẽ mang đến cuộc đời bạn nhiều điều mới mẻ và thú vị. Số 7 hướng nội, bí ẩn có thể giúp bạn nhìn nhận cuộc sống theo những cách mới và khám phá những khả năng, đam mê tiềm ẩn của mình. Bạn cũng rất hợp với số 1 mặc dù thỉnh thoảng họ có thể chỉ trích bạn một chút.'
+    },
+    {
+        src:require('./luv2.jpg'),
+        title:'Một nửa của bạn',
+        num: 4,
+        content:'Với số 4, bạn là một người có kỷ luật, thực tế và chăm chỉ nên tương thích nhất với các số 1, 7 và 8. Số 8 cũng là người coi trọng kỷ luật nên hai bạn sẽ là một cặp tuyệt vời. Số 7 cũng là một sự lựa chọn hoàn hảo vì họ rất thú vị và có khả năng truyền cảm hứng và tinh thần. Họ có thể giữ những cảm xúc của bạn dành mối quan hệ trong một thời gian dài, từ đó dẫn đến sự gắn kết có ý nghĩa và lâu bền. Cuối cùng, số 1 cũng rất tương thích với bạn vì họ có xu hướng là những cá nhân rất quyết đoán và giỏi tập trung.'
+    },
+    {
+        src:require('./luv2.jpg'),
+        title:'Một nửa của bạn',
+        num: 5,
+        content:'Là một người trung thành và can đảm, số 5 phù hợp nhất với các số 1, 3 và 7. Vì rất tận tụy với tình yêu của mình nên bạn có xu hướng tìm kiếm một người khó đoán và ít đòi hỏi để bạn có nhiều cơ hội chăm chút cho mối quan hệ. Số 1 rất can đảm, táo bạo và khó đoán. Vì vậy, đây là một đối tác tuyệt vời vì họ giúp bạn thoát ra khỏi vùng thoải mái của mình. Số 3 vui tươi và giàu trí tưởng tượng cũng là một lựa chọn tốt dành cho bạn vì họ là những người rất khó đoán. Số 7 hơi cô độc và thích sống ẩn dật cũng là đối tượng mà bạn có thể kết đôi để mang lại sự cân bằng cho mối quan hệ.'
+    },
+    {
+        src:require('./luv2.jpg'),
+        title:'Một nửa của bạn',
+        num: 6,
+        content:'Với số 6, bạn là một người ấm áp và tình cảm, bạn sẽ phù hợp với những người có số 1, 2, 8 và 9. Bản chất hiền lành, nhân hậu làm cho bạn hoàn toàn tương thích với số 1 – những người sống rất tử tế. Cả hai bạn sẽ biết quan tâm và yêu thương nhau. Số 2 là những cá nhân dễ bị con tim điều khiển nên cũng rất tương thích với tính cách của bạn. Số 8 có thể chăm sóc bạn chu đáo vì họ rất đáng tin và mạnh mẽ. Số 9 biết đồng cảm và quan tâm những người xung quanh nên cũng là một sự lựa chọn tuyệt vời.'
+    },
+    {
+        src:require('./luv2.jpg'),
+        title:'Một nửa của bạn',
+        num: 7,
+        content:'Với một chút dè dặt và thích sống ẩn dật, việc tìm thấy tình yêu đích thực có thể là một thách thức đối với bạn. Nhưng đừng vội lo lắng, bạn sẽ kết hợp hoàn hảo với số 3 và 5. Số 3 là những cá nhân giàu trí tưởng tượng và sáng tạo nên họ có thể giúp bạn bước ra khỏi vùng an toàn của mình để nhìn thấy nhiều thứ mới mẻ hơn. Một đối tượng tuyệt vời khác dành cho bạn là số 5. ​​Họ có thể hơi khó đoán và điều này góp phần làm cho mối quan hệ thêm phần thú vị bởi nó khiến bạn phải mở lòng hơn để hiểu người ấy.'
+    },
+    {
+        src:require('./luv2.jpg'),
+        title:'Một nửa của bạn',
+        num: 8,
+        content:'Với ý chí mạnh mẽ, tính cách quyết đoán và có trách nhiệm, bạn nên tìm người yêu có các số 2, 4 và 6. Số 2 là một người có khả năng phân tích cả hai mặt của bất kỳ tình huống nào và cố gắng hiểu bạn ngay cả khi bạn rất cứng đầu. Số 4 cũng có thể là một đối tác tương thích vì họ rất thực tế và có nhiều mục tiêu tương đồng với bạn. Số 6 hiền lành, tốt bụng và đáng yêu cũng là một đối tượng tuyệt vời vì họ rất giỏi trong việc đối mặt với tính cố chấp của bạn. Họ sẵn sàng thỏa hiệp và sẽ không bao giờ cố gắng kiểm soát bạn.'
+    },
+    {
+        src:require('./luv2.jpg'),
+        title:'Một nửa của bạn',
+        num: 9,
+        content:'Là một người thích giữ bí mật và dành nhiều thời gian một mình, bạn sẽ tương thích với “số đường đời” 2 và 6. Vì bạn không thích tiết lộ những đặc điểm dễ bị tổn thương của mình nên số 2 sẽ là một đối tác hoàn hảo. Khả năng thấu hiểu và cảm thông của họ sẽ giúp hai bạn dễ dàng giao tiếp với nhau hơn. Số 6 cũng là một đối tượng lý tưởng vì họ rất có trách nhiệm và chân thật giống như bạn.'
+    },
+]
+
+export {dataDuongDoi, dataKhatTam,dataNhanCach,dataDinhMenh,dataTuVi,data1Nua}
