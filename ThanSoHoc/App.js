@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-
+import SplashScreen from 'react-native-splash-screen';
 import {
   StyleSheet,
   View,
@@ -17,6 +17,7 @@ import CarouselScreen from './Component/Carousel'
 const Stack = createStackNavigator();
 
 const App = () => {
+  React.useEffect(() => {SplashScreen.hide()},[])
   return (
 
   <NavigationContainer>
