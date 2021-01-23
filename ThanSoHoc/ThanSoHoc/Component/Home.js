@@ -25,7 +25,7 @@ const HomeScreen = ({navigation}) => {
   return (
     <KeyboardAvoidingView style={styles.all}>
       <ImageBackground
-        source={require('../Image/91317.jpg')}
+        source={require('./91317.jpg')}
         style={{flex: 1,position:'absolute',width:'100%', height:'100%'}}>
         <View style={{alignItems: 'center', padding: 8, paddingTop: 22}}>
           <Text style={styles.title}>Tên đầy đủ</Text>
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'helveticaneuelight',
-    fontSize: 20,
+    fontSize: 18,
     padding: 15,
     fontWeight: '700',
     alignSelf: 'center',

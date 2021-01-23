@@ -8,10 +8,6 @@ target 'ThanSoHoc' do
 
   use_react_native!(:path => config["reactNativePath"])
 
-  pod 'CodePush', :path => '../node_modules/react-native-code-push'
-
-  pod 'appcenter-core', :path => '../node_modules/appcenter'
-
   target 'ThanSoHocTests' do
     inherit! :complete
     # Pods for testing
