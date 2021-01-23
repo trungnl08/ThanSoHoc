@@ -36,7 +36,7 @@ const CarouselScreen = ({route, navigation}) => {
 
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
-      <ImageBackground source={require('./91317.jpg')} style={styles.bg}>
+      <ImageBackground source={require('../Image/91317.jpg')} style={styles.bg}>
         <View style={{paddingTop: '26%', paddingBottom: 18}}>
           <CarouselT data={setData} />
         </View>
