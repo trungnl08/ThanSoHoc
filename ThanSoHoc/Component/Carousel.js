@@ -32,7 +32,7 @@ const CarouselScreen = ({route, navigation}) => {
   check(dataKhatTam, soKhatTam(P2));
   check(dataTuVi, duongDoiSo(P1))
   check(dataDinhMenh, soDinhMenh(P2));
-  check(data1Nua, (10 - duongDoiSo(P1)));
+  check(data1Nua, (10- duongDoiSo(P1)));
 
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
