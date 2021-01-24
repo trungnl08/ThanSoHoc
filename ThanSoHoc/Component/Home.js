@@ -19,8 +19,10 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 const HomeScreen = ({navigation}) => {
   const [date, setDate] = useState(new Date('2000-06-28'));
-  const [gender, setGender] = useState('');
-  const [name, setName] = useState('others');
+  const [gender, setGender] = useState('others');
+  const [name, setName] = useState('');
+  const [err, setErr] = useState('');
+
 
   return (
     <KeyboardAvoidingView style={styles.all}>
@@ -32,7 +34,10 @@ const HomeScreen = ({navigation}) => {
           <View style={styles.names}>
             <TextInput
               placeholder="Nhập tên đầy đủ ..."
-              onChangeText={(text) => setName(text)}></TextInput>
+              onChangeText={(text) => setName(text)}
+              value={name}
+            ></TextInput>
+            {!!err && (<Text style={{ color: 'red' }}>{err}</Text>)}
           </View>
           <Text style={styles.title}>Ngày sinh</Text>
 
@@ -75,11 +80,16 @@ const HomeScreen = ({navigation}) => {
         <View>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('Carousel', {
-                //truyen value input sang carousel screen
-                P1: date.getDate() + 1 +'/'+ date.getFullYear()+'/' + date.getMonth(),
-                P2: name.toLowerCase(),
-              });
+              if (name.trim() === '') {
+                setErr('Vui lòng nhập tên của bạn !!')
+              } else {
+                setErr(null)
+                navigation.navigate('Carousel', {
+                  //truyen value input sang carousel screen
+                  P1: date.getDate() + 1 + '/' + date.getFullYear() + '/' + date.getMonth(),
+                  P2: name.toLowerCase(),
+                });
+              }
             }}
             style={styles.button1}>
             <Text style={styles.butt}>Khám phá vận mệnh</Text>
