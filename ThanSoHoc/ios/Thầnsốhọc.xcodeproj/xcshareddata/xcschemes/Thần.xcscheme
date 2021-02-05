@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ThanSoHoc.app"
-               BlueprintName = "ThanSoHoc"
-               ReferencedContainer = "container:ThanSoHoc.xcodeproj">
+               BuildableName = "Thần.app"
+               BlueprintName = "Thần"
+               ReferencedContainer = "container:Thần.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ThanSoHocTests.xctest"
-               BlueprintName = "ThanSoHocTests"
-               ReferencedContainer = "container:ThanSoHoc.xcodeproj">
+               BuildableName = "ThầnTests.xctest"
+               BlueprintName = "ThầnTests"
+               ReferencedContainer = "container:Thần.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ThanSoHoc.app"
-            BlueprintName = "ThanSoHoc"
-            ReferencedContainer = "container:ThanSoHoc.xcodeproj">
+            BuildableName = "Thần.app"
+            BlueprintName = "Thần"
+            ReferencedContainer = "container:Thần.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ThanSoHoc.app"
-            BlueprintName = "ThanSoHoc"
-            ReferencedContainer = "container:ThanSoHoc.xcodeproj">
+            BuildableName = "Thần.app"
+            BlueprintName = "Thần"
+            ReferencedContainer = "container:Thần.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
