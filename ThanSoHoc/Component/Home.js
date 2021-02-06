@@ -19,7 +19,7 @@ import TrackPlayer from 'react-native-track-player';
 import services from '../services';
 
 const track = { 
-  url: require('../z.mp3'),
+  url: require('../lilo.m4a'),
 }
 
 const HomeScreen = ({navigation}) => {
@@ -34,15 +34,13 @@ const HomeScreen = ({navigation}) => {
       await TrackPlayer.setupPlayer().then(() => {
         console.log('run');
       });
-
-
       await TrackPlayer.add([track])
       await TrackPlayer.play()
+      await TrackPlayer.setVolume(0.3)
      
-      // setTimeout(() => {
-      //   TrackPlayer.stop()
-      //   TrackPlayer.play()
-      // }, 3000)
+      setTimeout(() => {
+        TrackPlayer.stop()
+      }, 10000)
     })()
   }, [])
 
