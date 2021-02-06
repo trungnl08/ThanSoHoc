@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -10,6 +10,7 @@ import {
   ImageBackground,
   KeyboardAvoidingView,
   Platform,
+  AppState,
 } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import DatePicker from 'react-native-date-picker';
@@ -27,6 +28,21 @@ const HomeScreen = ({navigation}) => {
   const [gender, setGender] = useState('others');
   const [name, setName] = useState('');
   const [err, setErr] = useState('');
+  const [music, setMusic] = useState('Tắt âm thanh');
+  const [mode, setMode] = useState(false);
+  const [color1, setColor1] = useState('#e9adb7');
+  const appState = useRef(AppState.currentState);
+  const [appStateVisible, setAppStateVisible] = useState(appState.current);
+
+
+//Effect check background
+  useEffect(() => {
+    AppState.addEventListener('change', _handleAppStateChange);
+
+    return () => {
+      AppState.removeEventListener('change', _handleAppStateChange);
+    };
+  }, []);
 
   React.useEffect(() => {
     (async () => {
@@ -34,10 +50,30 @@ const HomeScreen = ({navigation}) => {
         console.log('run');
       });
       await TrackPlayer.add([track]);
-      await TrackPlayer.play();
+      await TrackPlayer.play()
       await TrackPlayer.setVolume(0.4);
     })();
   }, []);
+
+  useEffect(() => {
+    
+  }, [])
+
+
+//Check ben trong or ben ngoai man hinh =>> set Music
+  const _handleAppStateChange = (nextAppState) => {
+    if (
+      appState.current.match(/inactive|background/) &&
+      nextAppState === 'active'
+    ) {
+      TrackPlayer.play()
+    } else {
+      TrackPlayer.pause()
+    }
+    appState.current = nextAppState;
+    setAppStateVisible(appState.current);
+  };
+  
 
   return (
     <KeyboardAvoidingView style={styles.all}>
@@ -114,6 +150,31 @@ const HomeScreen = ({navigation}) => {
             style={styles.button1}>
             <Text style={styles.butt}>Khám phá vận mệnh</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              if (mode) {
+                setMusic('Tắt âm thanh');
+                setMode(false);
+                setColor1('#e6929f');
+                TrackPlayer.play();
+              } else {
+                setMusic('Bật âm thanh');
+                setMode(true);
+                setColor1('#b3e2e4');
+                TrackPlayer.pause();
+              }
+            }}
+            style={{
+              width: '58%',
+              alignItems: 'center',
+              backgroundColor: color1,
+              padding: 10,
+              borderRadius: 11,
+              alignSelf: 'center',
+              marginTop: 15,
+            }}>
+            <Text style={styles.butt}>{music}</Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </KeyboardAvoidingView>
@@ -136,7 +197,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   button1: {
-    width: '65%',
+    width: '58%',
     alignItems: 'center',
     backgroundColor: '#6d9bfc',
     padding: 10,
