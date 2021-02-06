@@ -12,7 +12,7 @@ import {
   Platform,
 } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-
+import admob, { MaxAdContentRating } from '@react-native-firebase/admob';
 import DatePicker from 'react-native-date-picker';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';

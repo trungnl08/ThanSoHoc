@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "751649985355",
+    "project_id": "numerology-9e472",
+    "storage_bucket": "numerology-9e472.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751649985355:android:1acbc38444cfa3fc98cece",
+        "android_client_info": {
+          "package_name": "com.thansohoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751649985355-es3hgrlsrjqrhfga2al6bkl9oqdkq8nm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNF5ClSFCqfI8MXjV_eGHOyb1bEepyyMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751649985355-es3hgrlsrjqrhfga2al6bkl9oqdkq8nm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-8283090293065428~7649977859"
+    }
+  ],
+  "configuration_version": "1"
+}
