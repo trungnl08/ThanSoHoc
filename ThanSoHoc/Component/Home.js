@@ -15,12 +15,36 @@ import CheckBox from '@react-native-community/checkbox';
 import DatePicker from 'react-native-date-picker';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import TrackPlayer from 'react-native-track-player';
+import services from '../services';
+
+const track = { 
+  url: require('../z.mp3'),
+}
 
 const HomeScreen = ({navigation}) => {
   const [date, setDate] = useState(new Date('2000-06-28'));
   const [gender, setGender] = useState('others');
   const [name, setName] = useState('');
   const [err, setErr] = useState('');
+
+
+  React.useEffect(() => {
+    (async () => {
+      await TrackPlayer.setupPlayer().then(() => {
+        console.log('run');
+      });
+
+
+      await TrackPlayer.add([track])
+      await TrackPlayer.play()
+     
+      // setTimeout(() => {
+      //   TrackPlayer.stop()
+      //   TrackPlayer.play()
+      // }, 3000)
+    })()
+  }, [])
 
 
   return (
