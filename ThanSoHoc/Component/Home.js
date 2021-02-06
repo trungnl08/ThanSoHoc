@@ -18,9 +18,9 @@ import {createStackNavigator} from '@react-navigation/stack';
 import TrackPlayer from 'react-native-track-player';
 import services from '../services';
 
-const track = { 
+const track = {
   url: require('../lilo.m4a'),
-}
+};
 
 const HomeScreen = ({navigation}) => {
   const [date, setDate] = useState(new Date('2000-06-28'));
@@ -28,37 +28,30 @@ const HomeScreen = ({navigation}) => {
   const [name, setName] = useState('');
   const [err, setErr] = useState('');
 
-
   React.useEffect(() => {
     (async () => {
       await TrackPlayer.setupPlayer().then(() => {
         console.log('run');
       });
-      await TrackPlayer.add([track])
-      await TrackPlayer.play()
-      await TrackPlayer.setVolume(0.3)
-     
-      setTimeout(() => {
-        TrackPlayer.stop()
-      }, 10000)
-    })()
-  }, [])
-
+      await TrackPlayer.add([track]);
+      await TrackPlayer.play();
+      await TrackPlayer.setVolume(0.3);
+    })();
+  }, []);
 
   return (
     <KeyboardAvoidingView style={styles.all}>
       <ImageBackground
         source={require('./91317.jpg')}
-        style={{flex: 1,position:'absolute',width:'100%', height:'100%'}}>
+        style={{flex: 1, position: 'absolute', width: '100%', height: '100%'}}>
         <View style={{alignItems: 'center', padding: 8, paddingTop: 22}}>
           <Text style={styles.title}>Tên đầy đủ</Text>
           <View style={styles.names}>
             <TextInput
               placeholder="Nhập tên đầy đủ ..."
               onChangeText={(text) => setName(text)}
-              value={name}
-            ></TextInput>
-            {!!err && (<Text style={{ color: 'red' }}>{err}</Text>)}
+              value={name}></TextInput>
+            {!!err && <Text style={{color: 'red'}}>{err}</Text>}
           </View>
           <Text style={styles.title}>Ngày sinh</Text>
 
@@ -102,12 +95,18 @@ const HomeScreen = ({navigation}) => {
           <TouchableOpacity
             onPress={() => {
               if (name.trim() === '') {
-                setErr('Vui lòng nhập tên của bạn !!')
+                setErr('Vui lòng nhập tên của bạn !!');
               } else {
-                setErr(null)
+                setErr(null);
                 navigation.navigate('Carousel', {
                   //truyen value input sang carousel screen
-                  P1: date.getDate() + 1 + '/' + date.getFullYear() + '/' + date.getMonth(),
+                  P1:
+                    date.getDate() +
+                    1 +
+                    '/' +
+                    date.getFullYear() +
+                    '/' +
+                    date.getMonth(),
                   P2: name.toLowerCase(),
                 });
               }
@@ -165,7 +164,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   butt: {
-    fontSize:18
-  }
+    fontSize: 18,
+  },
 });
 export default HomeScreen;
