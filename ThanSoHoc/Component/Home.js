@@ -35,7 +35,7 @@ const HomeScreen = ({navigation}) => {
       });
       await TrackPlayer.add([track]);
       await TrackPlayer.play();
-      await TrackPlayer.setVolume(0.3);
+      await TrackPlayer.setVolume(0.4);
     })();
   }, []);
 
