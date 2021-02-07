@@ -32,11 +32,9 @@ import {
 const track = {
   url: require('../lilo1.m4a'),
 };
-const adUnitId = __DEV__
-  ? TestIds.INTERSTITIAL
-  : 'ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy';
 
-const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
+
+const interstitial = InterstitialAd.createForAdRequest('ca-app-pub-8283090293065428/8962843923', {
   requestNonPersonalizedAdsOnly: true,
   keywords: ['fashion', 'clothing', 'game', 'shopee'],
 });
