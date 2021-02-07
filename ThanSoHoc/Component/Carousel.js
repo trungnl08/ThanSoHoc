@@ -13,6 +13,11 @@ import Carousel from 'react-native-snap-carousel';
 import { soKhatTam, soNhanCach, soDinhMenh, duongDoiSo} from '../thansohoc';
 import {dataDuongDoi, dataKhatTam, dataNhanCach, dataDinhMenh,dataTuVi,data1Nua} from './data';
 import CarouselT from './caroT';
+import admob, { firebase, MaxAdContentRating } from '@react-native-firebase/admob';
+import { BannerAd, BannerAdSize, TestIds } from '@react-native-firebase/admob';
+
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-8283090293065428/5802026797';
+
 
 const CarouselScreen = ({route, navigation}) => {
   const {P1, P2} = route.params;
@@ -37,14 +42,20 @@ const CarouselScreen = ({route, navigation}) => {
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
       <ImageBackground source={require('./91317.jpg')} style={styles.bg}>
-        <View style={{paddingTop: '26%', paddingBottom: 18}}>
+        <View style={{paddingTop: '18%', paddingBottom: 18}}>
           <CarouselT data={setData} />
+          <Text style={styles.names}>Cuộn trái, phải để xem các con số và đường đời khác của bạn</Text>
         </View>
         <TouchableOpacity
           onPress={() => navigation.navigate('Home')}
           style={styles.button}>
-          <Text style={{fontSize: 18}}>Xem lại</Text>
+          <Text style={{fontSize: 18}}>Trở về</Text>
         </TouchableOpacity>
+        <View style={{marginTop:50}}>
+        <BannerAd
+      unitId={adUnitId}
+          size={BannerAdSize.SMART_BANNER}/>
+        </View>
       </ImageBackground>
     </View>
   );
@@ -62,6 +73,18 @@ const styles = StyleSheet.create({
   bg: {
     flex: 1,
     resizeMode: 'cover',
+  },
+  names: {
+    borderColor: '#E5E5EA',
+    borderWidth: 0.6,
+    backgroundColor: '#F1F1F3',
+    borderRadius: 7,
+    padding: 3,
+    width: '88%',
+    opacity: 0.6,
+    fontSize: 11.3,
+    textAlign: "center",
+    alignSelf:"center"
   },
 });
 export default CarouselScreen;

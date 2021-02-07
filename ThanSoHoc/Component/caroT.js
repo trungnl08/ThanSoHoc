@@ -16,9 +16,8 @@ let flatList;
 const CarouselT = ({data}) => {
   const scrollX = new Animated.Value(0);
   let position = Animated.divide(scrollX, width);
-    const [dataList, setDataList] = useState(data);
-    const [textD,setTextD]=useState('')
-  let x;
+  const [dataList, setDataList] = useState(data);
+
 
   useEffect(() => {
     setDataList(data);
@@ -74,19 +73,20 @@ const CarouselT = ({data}) => {
               />
             );
           })}
-            </View>
-       
+{/* 
         <TouchableOpacity
           style={{backgroundColor: 'blue', alignItems: 'center'}}
-          onPress={() => this.flatList.scrollToIndex({index: 3})}>
-          <Text>Sang trai</Text>
+          onPress={() => this.flatList.scrollToOffset({offset: num-scrollX})}>
+          <Text>sang trai</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{backgroundColor: 'blue', alignItems: 'center'}}
           onPress={() => this.flatList.scrollToIndex({index: 2})}>
           <Text>Sang phai</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
+            </View>
       </View>
+            
     );
   }
 
