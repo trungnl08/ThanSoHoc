@@ -16,7 +16,6 @@ import CarouselT from './caroT';
 import admob, { firebase, MaxAdContentRating } from '@react-native-firebase/admob';
 import { BannerAd, BannerAdSize, TestIds } from '@react-native-firebase/admob';
 
-const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-8283090293065428/5802026797';
 
 
 const CarouselScreen = ({route, navigation}) => {
@@ -53,7 +52,7 @@ const CarouselScreen = ({route, navigation}) => {
         </TouchableOpacity>
         <View style={{marginTop:50}}>
         <BannerAd
-      unitId={adUnitId}
+      unitId='ca-app-pub-8283090293065428/7288452560'
           size={BannerAdSize.SMART_BANNER}/>
         </View>
       </ImageBackground>
@@ -82,7 +81,7 @@ const styles = StyleSheet.create({
     padding: 3,
     width: '88%',
     opacity: 0.6,
-    fontSize: 11.3,
+    fontSize: 11.4,
     textAlign: "center",
     alignSelf:"center"
   },

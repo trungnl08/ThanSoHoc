@@ -17,14 +17,29 @@ import DatePicker from 'react-native-date-picker';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import TrackPlayer from 'react-native-track-player';
-import admob, { firebase, MaxAdContentRating } from '@react-native-firebase/admob';
-import { BannerAd, BannerAdSize, TestIds } from '@react-native-firebase/admob';
+import admob, {
+  firebase,
+  MaxAdContentRating,
+} from '@react-native-firebase/admob';
+import {
+  BannerAd,
+  BannerAdSize,
+  AdEventType,
+  InterstitialAd,
+  TestIds,
+} from '@react-native-firebase/admob';
 
 const track = {
   url: require('../lilo1.m4a'),
 };
+const adUnitId = __DEV__
+  ? TestIds.INTERSTITIAL
+  : 'ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy';
 
-const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-8283090293065428/5802026797';
+const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
+  requestNonPersonalizedAdsOnly: true,
+  keywords: ['fashion', 'clothing', 'game', 'shopee'],
+});
 
 const HomeScreen = ({navigation}) => {
   const [date, setDate] = useState(new Date('2001-06-28'));
@@ -37,14 +52,34 @@ const HomeScreen = ({navigation}) => {
   const appState = useRef(AppState.currentState);
   const [appStateVisible, setAppStateVisible] = useState(appState.current);
 
-//Effect check background
-  useEffect(() => {
-    AppState.addEventListener('change', _handleAppStateChange);
+  //Ads
+  const [loaded, setLoaded] = useState(false);
 
+  useEffect(() => {
+    const eventListener = interstitial.onAdEvent((type) => {
+      if (type === AdEventType.LOADED) {
+        setLoaded(true);
+      }
+    });
+
+    // Start loading the interstitial straight away
+    interstitial.load();
+
+    // Unsubscribe from events on unmount
     return () => {
-      AppState.removeEventListener('change', _handleAppStateChange);
+      eventListener();
     };
   }, []);
+
+  //Effect check background
+  // useEffect(() => {
+  //   AppState.addEventListener('change', _handleAppStateChange);
+
+  //   return () => {
+  //     AppState.removeEventListener('change', _handleAppStateChange);
+  //   };
+
+  // }, []);
 
   React.useEffect(() => {
     (async () => {
@@ -52,43 +87,46 @@ const HomeScreen = ({navigation}) => {
         console.log('run');
       });
       await TrackPlayer.add([track]);
-      await TrackPlayer.play()
+      await TrackPlayer.play();
       await TrackPlayer.setVolume(0.4);
     })();
+    AppState.addEventListener('change', _handleAppStateChange);
+
+    return () => {
+      AppState.removeEventListener('change', _handleAppStateChange);
+    };
   }, []);
 
   useEffect(() => {
     admob()
-  .setRequestConfiguration({
-    // Update all future requests suitable for parental guidance
-    maxAdContentRating: MaxAdContentRating.PG,
+      .setRequestConfiguration({
+        // Update all future requests suitable for parental guidance
+        maxAdContentRating: MaxAdContentRating.PG,
 
-    // Indicates that you want your content treated as child-directed for purposes of COPPA.
-    tagForChildDirectedTreatment: true,
+        // Indicates that you want your content treated as child-directed for purposes of COPPA.
+        tagForChildDirectedTreatment: true,
 
-    // Indicates that you want the ad request to be handled in a
-    // manner suitable for users under the age of consent.
-    tagForUnderAgeOfConsent: true,
-  })
-  .then(() => {
-    // Request config successfully set!
-  });
-  }, [])
+        // Indicates that you want the ad request to be handled in a
+        // manner suitable for users under the age of consent.
+        tagForUnderAgeOfConsent: true,
+      })
+      .then(() => {
+        // Request config successfully set!
+      });
+  }, []);
 
-
-//Check ben trong or ben ngoai man hinh =>> set Music
+  //Check ben trong or ben ngoai man hinh =>> set Music
   const _handleAppStateChange = (nextAppState) => {
     if (
       appState.current.match(/inactive|background/) &&
       nextAppState === 'active'
     ) {
-      TrackPlayer.play()
+      TrackPlayer.play();
     } else {
-      TrackPlayer.pause()
+      TrackPlayer.pause();
     }
     appState.current = nextAppState;
   };
-  
 
   return (
     <KeyboardAvoidingView style={styles.all}>
@@ -148,6 +186,7 @@ const HomeScreen = ({navigation}) => {
               if (name.trim() === '') {
                 setErr('Vui lòng nhập tên của bạn !!');
               } else {
+                interstitial.show();
                 setErr(null);
                 navigation.navigate('Carousel', {
                   //truyen value input sang carousel screen
@@ -191,10 +230,11 @@ const HomeScreen = ({navigation}) => {
             <Text style={styles.butt}>{music}</Text>
           </TouchableOpacity>
         </View>
-        <View style={{marginTop:50}}>
-        <BannerAd
-      unitId={adUnitId}
-          size={BannerAdSize.SMART_BANNER}/>
+        <View style={{marginTop: 50}}>
+          <BannerAd
+            unitId="ca-app-pub-8283090293065428/6367636025"
+            size={BannerAdSize.SMART_BANNER}
+          />
         </View>
       </ImageBackground>
     </KeyboardAvoidingView>
