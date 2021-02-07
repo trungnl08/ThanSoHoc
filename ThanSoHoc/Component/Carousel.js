@@ -14,7 +14,20 @@ import { soKhatTam, soNhanCach, soDinhMenh, duongDoiSo} from '../thansohoc';
 import {dataDuongDoi, dataKhatTam, dataNhanCach, dataDinhMenh,dataTuVi,data1Nua} from './data';
 import CarouselT from './caroT';
 import admob, { firebase, MaxAdContentRating } from '@react-native-firebase/admob';
-import { BannerAd, BannerAdSize, TestIds } from '@react-native-firebase/admob';
+import {
+  BannerAd,
+  BannerAdSize,
+  AdEventType,
+  InterstitialAd,
+  TestIds,
+} from '@react-native-firebase/admob';
+
+
+
+const interstitial = InterstitialAd.createForAdRequest('ca-app-pub-8283090293065428/5407754053', {
+  requestNonPersonalizedAdsOnly: true,
+  keywords: ['fashion', 'clothing', 'game', 'shopee'],
+});
 
 
 
@@ -36,7 +49,25 @@ const CarouselScreen = ({route, navigation}) => {
   check(dataKhatTam, soKhatTam(P2));
   check(dataTuVi, duongDoiSo(P1))
   check(dataDinhMenh, soDinhMenh(P2));
-  check(data1Nua, (10- duongDoiSo(P1)));
+  check(data1Nua, (10 - duongDoiSo(P1)));
+  
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const eventListener = interstitial.onAdEvent((type) => {
+      if (type === AdEventType.LOADED) {
+        setLoaded(true);
+      }
+    });
+
+    // Start loading the interstitial straight away
+    interstitial.load();
+
+    // Unsubscribe from events on unmount
+    return () => {
+      eventListener();
+    };
+  }, []);
 
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
@@ -46,7 +77,10 @@ const CarouselScreen = ({route, navigation}) => {
           <Text style={styles.names}>Cuộn trái, phải để xem các con số và đường đời khác của bạn</Text>
         </View>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => {
+            interstitial.show()
+            navigation.navigate('Home')
+          }}
           style={styles.button}>
           <Text style={{fontSize: 18}}>Trở về</Text>
         </TouchableOpacity>
