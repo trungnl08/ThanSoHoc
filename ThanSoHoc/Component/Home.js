@@ -24,21 +24,11 @@ import admob, {
 import {
   BannerAd,
   BannerAdSize,
-  AdEventType,
-  InterstitialAd,
-  TestIds,
 } from '@react-native-firebase/admob';
 
 const track = {
-  url: require('../lilo1.m4a'),
+  url: require('../lilo2.m4a'),
 };
-
-
-const interstitial = InterstitialAd.createForAdRequest('ca-app-pub-8283090293065428/8962843923', {
-  requestNonPersonalizedAdsOnly: true,
-  keywords: ['fashion', 'clothing', 'game', 'shopee'],
-});
-
 const HomeScreen = ({navigation}) => {
   const [date, setDate] = useState(new Date('2001-06-28'));
   const [gender, setGender] = useState('others');
@@ -48,37 +38,9 @@ const HomeScreen = ({navigation}) => {
   const [mode, setMode] = useState(false);
   const [color1, setColor1] = useState('#e9adb7');
   const appState = useRef(AppState.currentState);
-  const [appStateVisible, setAppStateVisible] = useState(appState.current);
-
-  //Ads
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    const eventListener = interstitial.onAdEvent((type) => {
-      if (type === AdEventType.LOADED) {
-        setLoaded(true);
-      }
-    });
-
-    // Start loading the interstitial straight away
-    interstitial.load();
-
-    // Unsubscribe from events on unmount
-    return () => {
-      eventListener();
-    };
-  }, []);
 
   //Effect check background
-  // useEffect(() => {
-  //   AppState.addEventListener('change', _handleAppStateChange);
-
-  //   return () => {
-  //     AppState.removeEventListener('change', _handleAppStateChange);
-  //   };
-
-  // }, []);
-
+  
   React.useEffect(() => {
     (async () => {
       await TrackPlayer.setupPlayer().then(() => {
@@ -123,7 +85,6 @@ const HomeScreen = ({navigation}) => {
     } else {
       TrackPlayer.pause();
     }
-    appState.current = nextAppState;
   };
 
   return (
@@ -184,7 +145,6 @@ const HomeScreen = ({navigation}) => {
               if (name.trim() === '') {
                 setErr('Vui lòng nhập tên của bạn !!');
               } else {
-                interstitial.show();
                 setErr(null);
                 navigation.navigate('Carousel', {
                   //truyen value input sang carousel screen
@@ -230,8 +190,11 @@ const HomeScreen = ({navigation}) => {
         </View>
         <View style={{marginTop: 50}}>
           <BannerAd
-            unitId="ca-app-pub-8283090293065428/6367636025"
+            unitId='ca-app-pub-8283090293065428/6367636025'
             size={BannerAdSize.SMART_BANNER}
+            requestOptions={{
+              requestNonPersonalizedAdsOnly: true,
+            }}
           />
         </View>
       </ImageBackground>

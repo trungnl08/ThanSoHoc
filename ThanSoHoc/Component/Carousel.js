@@ -13,7 +13,10 @@ import Carousel from 'react-native-snap-carousel';
 import { soKhatTam, soNhanCach, soDinhMenh, duongDoiSo} from '../thansohoc';
 import {dataDuongDoi, dataKhatTam, dataNhanCach, dataDinhMenh,dataTuVi,data1Nua} from './data';
 import CarouselT from './caroT';
-import admob, { firebase, MaxAdContentRating } from '@react-native-firebase/admob';
+import admob, {
+  firebase,
+  MaxAdContentRating,
+} from '@react-native-firebase/admob';
 import {
   BannerAd,
   BannerAdSize,
@@ -24,15 +27,10 @@ import {
 
 
 
-const interstitial = InterstitialAd.createForAdRequest('ca-app-pub-8283090293065428/5407754053', {
-  requestNonPersonalizedAdsOnly: true,
-  keywords: ['fashion', 'clothing', 'game', 'shopee'],
-});
-
-
 
 const CarouselScreen = ({route, navigation}) => {
-  const {P1, P2} = route.params;
+  const { P1, P2 } = route.params;
+    
 
   //Tao array de push data cua cac So hoc sau khi tinh toan va so sanh
   let setData = new Array();
@@ -50,25 +48,8 @@ const CarouselScreen = ({route, navigation}) => {
   check(dataTuVi, duongDoiSo(P1))
   check(dataDinhMenh, soDinhMenh(P2));
   check(data1Nua, (10 - duongDoiSo(P1)));
+
   
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    const eventListener = interstitial.onAdEvent((type) => {
-      if (type === AdEventType.LOADED) {
-        setLoaded(true);
-      }
-    });
-
-    // Start loading the interstitial straight away
-    interstitial.load();
-
-    // Unsubscribe from events on unmount
-    return () => {
-      eventListener();
-    };
-  }, []);
-
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
       <ImageBackground source={require('./91317.jpg')} style={styles.bg}>
@@ -78,7 +59,6 @@ const CarouselScreen = ({route, navigation}) => {
         </View>
         <TouchableOpacity
           onPress={() => {
-            interstitial.show()
             navigation.navigate('Home')
           }}
           style={styles.button}>
@@ -87,7 +67,10 @@ const CarouselScreen = ({route, navigation}) => {
         <View style={{marginTop:50}}>
         <BannerAd
       unitId='ca-app-pub-8283090293065428/7288452560'
-          size={BannerAdSize.SMART_BANNER}/>
+            size={BannerAdSize.SMART_BANNER}
+            requestOptions={{
+              requestNonPersonalizedAdsOnly: true,
+            }}/>
         </View>
       </ImageBackground>
     </View>
